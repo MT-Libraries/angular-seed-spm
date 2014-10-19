@@ -2,8 +2,9 @@
 
 var AngularSeedSpm = angular.module('ASS', ['ngRoute', 'ASS.homeControllers', 'ASS.aboutControllers', 'ASS.appVer']);
 
-AngularSeedSpm.config(['$routeProvider', function ($routeProvider) {
+AngularSeedSpm.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
+    $locationProvider.html5Mode(false);
 }]);
 
 
