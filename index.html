@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angular-Seed-Spm</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="public/css/app.min.css">
+  <script src="public/vendors/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+
+    <ul class="menu">
+      <li class="brand"><a href="#/">Angular-Seed-Spm</a></li>
+      <li><a href="#/home">Home</a></li>
+      <li><a href="#/about">About</a></li>
+    </ul>
+  </header>
+
+  <div class="layout">
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-view></div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-block">Angular seed app: v<span app-version></span>
+    </div>
+  </footer>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <!--<script type="text/javascript" src="apps/sea-modules/jquery/2.1.1/jquery.min.js"></script>-->
+  <script type="text/javascript" src="apps/sea-modules/seajs/2.3.0/dist/sea.js"></script>
+  <script type="text/javascript" src="apps/sea-modules/seajs-wrap/1.0.1/dist/seajs-wrap.js"></script>
+  <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular.min.js"></script>
+  <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular-route.min.js"></script>
+  <script>
+
+    var _DEV = true;
+    var _BSE = {};
+    var _APP = {};
+
+    if(_DEV){
+      _APP = './apps/src/app';
+      _BSE = './apps/sea-modules/';
+    }else{
+      _APP = './apps/dist/angular-seed-spm/0.0.1/src/app-debug';
+      _BSE = './apps/dist';
+    }
+
+    seajs.config({base: _BSE});
+    seajs.use(_APP);
+  </script>
+</body>
+</html>
