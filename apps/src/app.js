@@ -1,6 +1,6 @@
 'use strict';
 
-var AngularSeedSpm = angular.module('ASS', ['ngRoute', 'ASS.homeControllers', 'ASS.aboutControllers', 'ASS.appVer']);
+var AngularSeedSpm = angular.module('ASS', ['ngRoute', 'ASS.home', 'ASS.intro','ASS.about', 'ASS.appVer']);
 
 AngularSeedSpm.config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
@@ -8,8 +8,9 @@ AngularSeedSpm.config(['$routeProvider','$locationProvider', function ($routePro
 }]);
 
 
-var homeControllers = require("./home/homeControllers");
-var aboutControllers = require("./about/aboutControllers");
+var home = require("./home/home");
+var about = require("./about/about");
+var intro = require("./intro/intro")
 var appVer = require("./components/ver/appVer");
 
 angular.bootstrap(document, ['ASS']);
