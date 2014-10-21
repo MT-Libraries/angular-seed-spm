@@ -10,7 +10,7 @@ AngularSeedSpm.config(['$routeProvider','$locationProvider', function ($routePro
 
 var home = require("./home/home");
 var about = require("./about/about");
-var intro = require("./intro/intro")
+var intro = require("./intro/intro");
 var appVer = require("./components/ver/appVer");
 
 angular.bootstrap(document, ['ASS']);
