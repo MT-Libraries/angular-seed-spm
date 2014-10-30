@@ -1,6 +1,6 @@
 'use strict';
 
-var interpolateFilter = angular.module('ASS.appVer.interpolate-filter', [])
+var interpolateFilter = angular.module('ASS.version.interpolate-filter', [])
 
 .filter('interpolate', ['version', function(version) {
   return function(text) {

@@ -7,8 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Angular-Seed-Spm</title>
-  <base href="/angular-seed-spm/">
-  <meta name="description" content="">
+  <meta name="description" content="Angular Seed for SpmJS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/main.css">
@@ -18,7 +17,6 @@
 <body>
 
   <header class="header">
-
     <ul class="menu">
       <li class="brand"><a href="#/">Angular-Seed-Spm</a></li>
       <li><a href="#/home">Home</a></li>
@@ -46,27 +44,12 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <!--<script type="text/javascript" src="apps/sea-modules/jquery/2.1.1/jquery.min.js"></script>-->
-  <script type="text/javascript" src="apps/sea-modules/seajs/2.3.0/dist/sea.js"></script>
-  <script type="text/javascript" src="apps/sea-modules/seajs-wrap/1.0.1/dist/seajs-wrap.js"></script>
+  <script type="text/javascript" src="apps/spm_modules/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="apps/spm_modules/seajs/2.3.0/dist/sea.js"></script>
+  <script type="text/javascript" src="apps/spm_modules/seajs-wrap/1.0.1/dist/seajs-wrap.js"></script>
   <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular.min.js"></script>
   <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular-route.min.js"></script>
-  <script>
+  <script type="text/javascript" src="apps/config.js"></script>
 
-    var _DEV = true;
-    var _BSE = {};
-    var _APP = {};
-
-    if(_DEV){
-      _APP = './apps/src/app';
-      _BSE = './apps/sea-modules/';
-    }else{
-      _APP = './apps/dist/angular-seed-spm/0.0.1/src/app-debug';
-      _BSE = './apps/dist';
-    }
-
-    seajs.config({base: _BSE});
-    seajs.use(_APP);
-  </script>
 </body>
 </html>
