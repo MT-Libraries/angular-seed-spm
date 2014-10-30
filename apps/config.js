@@ -32,7 +32,7 @@ if (_DEV) {
 
 } else {
 
-    _APP = './apps/dist/angular-seed-spm/0.0.1/src/app-debug';
+    _APP = './apps/dist/angular-seed-spm/0.0.1/src/app';
     _CNF = {
         base: './apps/dist'
     };
