@@ -1,0 +1,215 @@
+//@import "base/normalize";
+/* app css stylesheet */
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro', 'Microsoft YaHei', sans-serif;
+}
+
+html {
+    _height: auto;
+    _padding: 3em 0 2em;
+}
+
+.header, .footer, .layout {
+    width: 100%;
+}
+
+/* ==============================
+ *      Header
+ * ============================ */
+
+.header {
+    margin-top: 0;
+    padding: 2em 0;
+    height: 3em;
+    display: table;
+    box-shadow: 0px 2px 1px rgba(225, 225, 225, 0.7);
+    background: #02AA9E;
+}
+
+.menu {
+    list-style: none;
+}
+
+ul.menu {
+
+    padding: 0 2em;
+    height: 100%;
+    border-box: box-sizing;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu > li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 2em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.menu > li:nth-child(2):before {
+    content: "";
+    padding: 0;
+}
+
+.menu > li > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.brand {
+    width: 6em;
+}
+
+/* ==============================
+ *      Layout
+ * ============================ */
+
+.layout {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: table;
+    color: #777;
+    text-align: center;
+
+    .vertical {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .wrap-content{
+        height: 100%;
+    }
+
+}
+
+
+
+/* ==============================
+ *      Footer
+ * ============================ */
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+}
+
+.footer-block {
+    margin: 0 2em;
+}
+
+/* ==============================
+ *      angular-style
+ * ============================ */
+
+/* ==============================
+ *      d3js-style
+ * ============================ */
+
+svg {
+    width: 840px;
+    height: 400px;
+}
+
+path, line {
+    stroke: #777;
+}
+
+/* ==============================
+ *      spinner-style
+ * ============================ */
+
+.loading {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #1abc9c;
+    z-index: 999;
+}
+
+.loading-brand {
+    color: #fff;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner > div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner {
+
+    .rect2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+
+    .rect3 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+    .rect4 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+
+    .rect5 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+}
+
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}

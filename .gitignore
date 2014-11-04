@@ -1,7 +1,8 @@
 *.iml
 .idea/
-public/css/less/node_modules/
+node_modules/
 apps/_site/
 apps/examples/
 apps/sea-modules/
+apps/spm_modules/
 apps/tests/

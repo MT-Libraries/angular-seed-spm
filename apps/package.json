@@ -1,0 +1,30 @@
+{
+  "name": "angular-seed-spm",
+  "version": "0.0.1",
+  "description": "angular seed for spmjs",
+  "keywords": [],
+  "homepage": "",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thonatos/angular-seed-spm.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "output": [
+      "src/app.js"
+    ],
+    "dependencies": {
+      "seajs": "2.3.0",
+      "seajs-wrap": "1.0.1",
+      "jquery": "2.1.1"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}

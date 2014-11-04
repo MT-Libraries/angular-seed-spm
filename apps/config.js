@@ -1,44 +1,39 @@
 /**
  * Created by thonatos on 14-10-22.
  */
-var _DEV = false;
+
+var _DEV = true;
 var _PRO = false;
+var _BSE = {};
 var _APP = {};
-var _CNF = {};
+var _URL = {};
+
 
 <!-- We Add dynamic base attribute by run_env-->
 
-var baseTag = document.createElement("base");
-
 if(_PRO){
-    baseTag.setAttribute("href", "/");
+    _URL = "/";
 }else{
-    baseTag.setAttribute("href", "/angular-seed-spm/");
+    _URL = "/angular-seed-spm/";
 }
+addBase(_URL);
 
-document.getElementsByTagName("head")[0].appendChild(baseTag);
-
-
-<!-- Conf for SeaJS -->
+<!-- We use different app-version by run_env-->
 
 if (_DEV) {
-
     _APP = './apps/src/app';
-    _CNF = {
-        base: './apps/spm_modules/'
-    };
-
-
-
+    _BSE = './apps/spm_modules/';
 } else {
-
     _APP = './apps/dist/angular-seed-spm/0.0.1/src/app';
-    _CNF = {
-        base: './apps/dist'
-    };
-
+    _BSE = './apps/dist';
 }
 
-
-seajs.config(_CNF);
+seajs.config({base: _BSE});
 seajs.use(_APP);
+
+
+function addBase(addr){
+    var baseTag = document.createElement("base");
+    baseTag.setAttribute("href", addr);
+    document.getElementsByTagName("head")[0].appendChild(baseTag);
+}
