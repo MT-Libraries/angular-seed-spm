@@ -1,1 +1,0 @@
-define("angular-seed-spm/0.0.1/index",[],function(e,n,a){var d;a.exports=d});

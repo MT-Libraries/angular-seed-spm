@@ -1,11 +1,10 @@
 # angular-seed-spm
 
-angular-seed
+angular-seed（请查看gh-pages分支。）
 
 用于构建angular项目的模板工程，适用于直接构建ng项目。
 
 本项目是提供了spm支持(即支持commonJs规范)的angular-seed模板。
-
 
 ## Install (安装)：
 
