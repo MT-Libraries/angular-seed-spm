@@ -9,21 +9,15 @@
   <title>Angular-Seed-Spm</title>
   <meta name="description" content="Angular Seed for SpmJS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="public/vendors/html5-boilerplate/css/main.css">
+
+  <!--<link href='http://fonts.useso.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>-->
+
+  <link rel="stylesheet" href="public/css/foundation.min.css">
   <link rel="stylesheet" href="public/css/app.min.css">
-  <script src="public/vendors/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="public/vendors/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
 </head>
 <body>
-
-  <header class="header">
-    <ul class="menu">
-      <li class="brand"><a href="#/">Angular-Seed-Spm</a></li>
-      <li><a href="#/home">Home</a></li>
-      <li><a href="#/intro">Intro</a></li>
-      <li><a href="#/about">About</a></li>
-    </ul>
-  </header>
 
   <div class="layout">
 
@@ -31,24 +25,21 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <div ui-view></div>
 
   </div>
 
-  <footer class="footer">
-    <div class="footer-block">Angular seed app: v<span app-version></span>
-    </div>
-  </footer>
+  <!-- In production use: -->
 
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
   <script type="text/javascript" src="apps/spm_modules/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="apps/spm_modules/seajs/2.3.0/dist/sea.js"></script>
   <script type="text/javascript" src="apps/spm_modules/seajs-wrap/1.0.1/dist/seajs-wrap.js"></script>
-  <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular.min.js"></script>
-  <script type="text/javascript" src="public/vendors/angularjs/1.2.25/angular-route.min.js"></script>
+
+  <script type="text/javascript" src="public/vendors/bower_components/foundation/js/foundation.min.js"></script>
+  <script type="text/javascript" src="public/vendors/bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="public/vendors/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!-- Run_Env Config: -->
   <script type="text/javascript" src="apps/config.js"></script>
 
 </body>
